@@ -1,4 +1,14 @@
 body {
+  background-image: url('https://www.space.gov.il/sites/default/files/earth-1990298_1920.jpg'); /* רקע ברירת מחדל */
+  background-size: cover;        /* התמונה תכסה את כל המסך */
+  background-position: center;   /* תמונה ממורכזת */
+  background-attachment: fixed;  /* רקע קבוע בזמן גלילה, אופציונלי */
+  transition: background 0.7s ease; /* מעבר חלק כאשר מחליפים תמונה */
+  direction: rtl;
+  font-family: Arial, sans-serif;
+
+
+    
   direction: rtl;
   font-family: Arial, sans-serif;
 }
