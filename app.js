@@ -12,23 +12,16 @@ $(function() {
         if (!page.missing) {
           const title = page.title || 'אין כותרת';
           const extract = page.extract || 'אין תוכן';
-          const image = page.thumbnail ? page.thumbnail.source : null; 
+          const image = page.thumbnail ? page.thumbnail.source : 'images/background2.jpg';
 
-          if(image){
-            $('body').css('background-image', 'url(images/background2.jpg)'); 
-            $('body').css('background-color', ''); 
-            } else {
-            $('body').css('background-image', '');
-            $('body').css('background-color', 'gray'); 
-            }
-
+          $('body').css('background-image', `url(${image})`);
 
           $('#results').append(`
             <div class="card mb-3" style="background-color: rgba(255,255,255,0.85);">
               <div class="card-body">
                 <h5 class="card-title">${title}</h5>
                 <p class="card-text">${extract}</p>
-                ${image ? `<img src="${image}" class="img-fluid mt-2" alt="${title}">` : ''}
+                <img src="${image}" class="img-fluid mt-2" alt="${title}">
               </div>
             </div>
           `);
