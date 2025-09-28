@@ -1,7 +1,7 @@
 $(function() {
 
   function searchWiki(term) {
-    const url = `https://he.wikipedia.org/w/api.php?action=query&prop=extracts|pageimages&format=json&exintro=&explaintext=&titles=${encodeURIComponent(term)}&origin=*`;
+    const url = `https://he.wikipedia.org/w/api.php?action=query&prop=extracts|pageimages&format=json&exintro=&explaintext=&titles=${encodeURIComponent(term)}&pithumbsize=800&origin=*`;
 
     $.getJSON(url, function(data) {
       $('#results').empty();
